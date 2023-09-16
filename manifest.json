@@ -1,0 +1,28 @@
+{
+  "background_color": "#b9b0ad",
+  "description": "Portfolio_de_investimentos\nApresentações_metodologicas_avançadas",
+  "dir": "auto",
+  "display": "standalone",
+  "name": "Invest'Braz",
+  "orientation": "portrait",
+  "scope": "sobrenos.html/ traders.html",
+  "short_name": "investbraz",
+  "start_url": "index.html",
+  "theme_color": "#ff5516",
+  "categories": [
+    "business",
+    "finance",
+    "utilities"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "logo Invest'braz.png",
+      "type": "image/png",
+      "sizes": "1563x1563"
+    }
+  ],
+  "shortcuts": [],
+  "lang": "pt",
+  "prefer_related_applications": true
+}
