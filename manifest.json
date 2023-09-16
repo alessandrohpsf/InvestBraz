@@ -22,7 +22,23 @@
       "sizes": "1563x1563"
     }
   ],
-  "shortcuts": [],
+  "shortcuts": [
+    {
+      "name": "investbraz",
+      "url": "https://investbraz.netlify.app/#",
+      "description": "Investimentos"
+    }
+  ],
   "lang": "pt",
-  "prefer_related_applications": true
+  "prefer_related_applications": true,
+  "display_override": [
+    "fullscreen",
+    "browser",
+    "standalone",
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }
