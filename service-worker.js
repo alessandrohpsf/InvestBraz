@@ -9,44 +9,22 @@ self.addEventListener('install', event => {
       .then(cache => cache.addAll([
 
         './index.html',
-
         './sobrenos.html',
-
-        './traders',
+        './traders.html',
+        './contato.html',
 
         './css/fontawesome-all.min.css',
-
         './js/main.css',
-
         './js/breakpoints.min.js',
-
         './js/browser.min.js',
-
         './js/jquery.min.js',
-
         './js/jquery.scrollex.min.js',
-
         './js/jquery.scrolly.min.js',
-
         './js/main.js',
-
         './js/util.js',
-        
-        './logo_investbraz.png',
 
-        './icons/icone29.png',
-        './icons/icone40.png',
-        './icons/icone57.png',
-        './icons/icone58.png',
-        './icons/icone60.png',
-        './icons/icone80.png',
-        './icons/icone87.png',
-        './icons/icone114.png',
-        './icons/icone120.png',
-        './icons/icone180.png',
-        './icons/icone1024.png',
-        './icons/icone1025.png',
-        './icons/icone1026.png',
+        './icons/logo_228x185.png',
+        './icons/logo_512x512.png',
 
         './images/bg.webp',
         './images/pic01.webp',
@@ -62,7 +40,6 @@ self.addEventListener('install', event => {
         './images/pic11.webp',
         './images/pic12.webp',
         './images/pic13.webp',
-        './images/pic14.webp',
         
         
       ]))
@@ -86,7 +63,7 @@ self.addEventListener('fetch', function (event) {
   }());
 
   //Atualizacao cache
-  /*event.respondWith(
+  event.respondWith(
     caches.match(event.request)
       .then(function (response) {
         if (response) {
@@ -94,6 +71,6 @@ self.addEventListener('fetch', function (event) {
         }
         return fetch(event.request);
       })
-  );*/
+  );
 
 });
