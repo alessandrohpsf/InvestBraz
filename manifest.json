@@ -1,5 +1,5 @@
 {
-  "name": "investBraz",
+  "name": "invest'Braz",
   "description": "portfolio de investimentos e assuntos relacionados ao mercado financeiro.",
   "start_url": "index.html",
   "lang": "pt-BR",
@@ -10,14 +10,15 @@
       "src": "icons/logo_512x512",
       "sizes": "512x512",
       "type": "png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "icons/logo_228x185",
       "sizes": "228x185",
       "type": "png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
+
   ],
   "screenshots": [
     {
@@ -90,5 +91,15 @@
       "sizes": "768x523",
       "type": "webp"
     }
-  ]
+  ],
+  "background_color": "#000000",
+  "dir": "auto",
+  "orientation": "portrait",
+  "categories": [
+    "business",
+    "education",
+    "finance"
+  ],
+  "short_name": "investbraz",
+  "id": "IB"
 }
