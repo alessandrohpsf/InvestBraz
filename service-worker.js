@@ -1,7 +1,13 @@
-const CACHE_NAME = 'cool-cache';
+var cacheName = 'pwaTeste+-v1.0';
 
+self.addEventListener('install', event => {
 
-const PRECACHE_ASSETS = [
+  self.skipWaiting();
+
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(cache => cache.addAll([
+
         './index.html',
         './sobrenos.html',
         './traders.html',
@@ -40,34 +46,37 @@ const PRECACHE_ASSETS = [
         './images/pic11.webp',
         './images/pic12.webp',
         './images/pic13.webp',
-]
-
-
-self.addEventListener('install', event => {
-    event.waitUntil((async () => {
-        const cache = await caches.open(CACHE_NAME);
-        cache.addAll(PRECACHE_ASSETS);
-    })());
-});
-
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
-});
-
-self.addEventListener('fetch', event => {
-  event.respondWith(async () => {
-      const cache = await caches.open(CACHE_NAME);
-
-      
-      const cachedResponse = await cache.match(event.request);
-
-      
-      if (cachedResponse !== undefined) {
-          
-          return cachedResponse;
-      } else {
         
-          return fetch(event.request)
-      };
-  });
+        
+      ]))
+  );
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
+
+self.addEventListener('fetch', function (event) {
+  //Atualizacao internet
+  event.respondWith(async function () {
+    try {
+      return await fetch(event.request);
+    } catch (err) {
+      return caches.match(event.request);
+    }
+  }());
+
+  //Atualizacao cache
+  event.respondWith(
+    caches.match(event.request)
+      .then(function (response) {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+  );
+
 });
