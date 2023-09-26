@@ -1,44 +1,92 @@
 {
-  "background_color": "#b9b0ad",
-  "description": "Portfolio_de_investimentos\nApresentações_metodologicas_avançadas",
-  "dir": "auto",
-  "display": "standalone",
-  "name": "Invest'Braz",
-  "orientation": "portrait",
-  "scope": "sobrenos.html/ traders.html",
-  "short_name": "investbraz",
+  "name": "investBraz",
+  "description": "portfolio de investimentos e assuntos relacionados ao mercado financeiro.",
   "start_url": "index.html",
-  "theme_color": "#ff5516",
-  "categories": [
-    "business",
-    "finance",
-    "utilities"
-  ],
-  "screenshots": [],
+  "lang": "pt-BR",
+  "theme_color": "#212931",
+  "display": "standalone",
   "icons": [
     {
-      "src": "logo_Investbraz.png",
-      "type": "image/png",
-      "sizes": "228x185"
-    }
-  ],
-  "shortcuts": [
+      "src": "icons/logo_512x512",
+      "sizes": "512x512",
+      "type": "png"
+    },
     {
-      "name": "investbraz",
-      "url": "https://investbraz.netlify.app/#",
-      "description": "Investimentos"
+      "src": "icons/logo_228x185",
+      "sizes": "228x185",
+      "type": "png"
     }
   ],
-  "lang": "pt",
-  "prefer_related_applications": true,
-  "display_override": [
-    "fullscreen",
-    "browser",
-    "standalone",
-    "window-controls-overlay",
-    "minimal-ui"
-  ],
-  "edge_side_panel": {
-    "preferred_width": 400
-  }
+  "screenshots": [
+    {
+      "src": "images/bg",
+      "sizes": "1280x1920",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic01",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic02",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic03",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic04",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic05",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic06",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic07",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic08",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic09",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic10",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic11",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic12",
+      "sizes": "768x523",
+      "type": "webp"
+    },
+    {
+      "src": "images/pic13",
+      "sizes": "768x523",
+      "type": "webp"
+    }
+  ]
 }
