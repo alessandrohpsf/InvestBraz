@@ -1,4 +1,4 @@
-var cacheName = 'pwaTeste+-v1.0';
+var cacheName = 'testeib';
 
 self.addEventListener('install', event => {
 
@@ -23,16 +23,11 @@ self.addEventListener('install', event => {
         './js/main.js',
         './js/util.js',
 
-        './icons/logo_228x185.png',
+        './icons/logo_228x228.png',
         './icons/logo_512x512.png',
-        './icons/logo_48x48.png',
-        './icons/logo_72x72.png',
-        './icons/logo_96x96.png',
         './icons/logo_144x144.png',
-        './icons/logo_192x192.png',
 
-
-        './images/bg.webp',
+       
         './images/pic01.webp',
         './images/pic02.webp',
         './images/pic03.webp',
@@ -69,7 +64,7 @@ self.addEventListener('fetch', function (event) {
   }());
 
   //Atualizacao cache
-  event.respondWith(
+  /*event.respondWith(
     caches.match(event.request)
       .then(function (response) {
         if (response) {
@@ -77,6 +72,6 @@ self.addEventListener('fetch', function (event) {
         }
         return fetch(event.request);
       })
-  );
+  );*/
 
 });

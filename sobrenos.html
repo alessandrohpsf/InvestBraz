@@ -3,8 +3,8 @@
 	<head>
 		<title>Invest'Braz</title>
 		<link rel="icon" 
-              type="image/png" 
-              href="icons/logo_228x185.png" />
+              type="png" 
+              href="icons/logo_144x144.png" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/main.css" />
@@ -16,18 +16,14 @@
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
-				<!-- Header -->
-				<div id="intro">
-				<header id="header">
-					<a href="index.html" class="logo"><img src="icons/logo_228x185.png"/></a>
-				</header>
-			    </div>
+				<div id="intro"></div>
 
 				<!-- Nav -->
 					<nav id="nav" id="intro">
 						<ul class="links">
 							<li><a href="index.html">Nossos Serviços</a></li>
 							<li class="active"><a href="sobrenos.html">Sobre nós</a></li>
+							<li><a href="escritorios.html">Escritórios</a></li>
 							<li><a href="traders.html">traders</a></li>
 							<li><a href="contato.html">Contato</a></li>
 						</ul>
@@ -74,7 +70,8 @@
 									<h3>Compromisso com a Transparência</h3>
 									🌈A transparência é fundamental em nosso relacionamento com você. Nossas taxas são claras e competitivas, sem surpresas desagradáveis. Valorizamos a confiança que você deposita em nós e estamos comprometidos em mantê-la em cada interação.
 								</header>
-
+                                
+							
 					</div>
 
 				
@@ -91,6 +88,23 @@
 			<script src="js/breakpoints.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
+
+			<script>
+				let newWorker;
+				if ('serviceWorker' in navigator) {
+				  navigator.serviceWorker.register('/service-worker.js').then(reg => {
+					reg.addEventListener('updatefound', () => {
+					  newWorker = reg.installing;
+					});
+				  });
+				  let refreshing;
+				  navigator.serviceWorker.addEventListener('controllerchange', function () {
+					if (refreshing) return;
+					window.location.reload();
+					refreshing = true;
+				  });
+				}
+			  </script>
 
 	</body>
 </html>
